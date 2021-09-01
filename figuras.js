@@ -130,35 +130,47 @@ function calcularAreaCirculo(){
     alert("El área del círculo es " + area );
 }
 
-function calcularAltura(a, b, c) {
+function alturaIsosceles(a, b, c) {
     if (a + b > c && a + c > b && b + c > a && a - b < c  && a - c < b && b - c < a) {
         if (a == b || b == c || c == a) {
-            console.log ("Es un triángulo isóceles");
             if (a == b) {
-                const baseIsoceles = c / 2;
+                const baseIsosceles = c / 2;
                 const hipotenusa = a;
-                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
-                return altura;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsosceles * baseIsosceles));
+                return "La altura del triángulo isósceles es de " + altura + " cm; y tu base de " + baseIsosceles + " cm.";
             }
             else if (a == c) {
-                const baseIsoceles = b / 2;
+                const baseIsosceles = b / 2;
                 const hipotenusa = a;
-                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
-                return altura;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsosceles * baseIsosceles));
+                return "La altura del triángulo isósceles es de " + altura + " cm, y tu base de " + baseIsosceles + " cm.";
             }
             else if (b == c) {
-                const baseIsoceles = a / 2;
+                const baseIsosceles = a / 2;
                 const hipotenusa = c;
-                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
-                return altura;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsosceles * baseIsosceles));
+                return "La altura del triángulo isósceles es de " + altura + " cm. y tu base de " + baseIsosceles + " cm.";
             }
         }
         else {
-            return console.log  ("No son las medidas de un triángulo isóceles.")
+            return "No son las medidas de un triángulo isósceles.";
         }
     }
     else {
-        return "No son las medidas de un triángulo"    
+        return "No son las medidas de un triángulo, verifique las medidas por favor."    
     }    
 }
 
+function calcularAlturaIsosceles () {
+    const a = document.getElementById("ladoATrianguloIsosceles");
+    const aValue= parseInt(a.value);
+    const b = document.getElementById("ladoBTrianguloIsosceles");
+    const bValue= parseInt(b.value);
+    const c = document.getElementById("ladoCTrianguloIsosceles");
+    const cValue= parseInt(c.value);
+
+    altura = alturaIsosceles(aValue, bValue, cValue);
+    resultado = document.getElementById("resultadoAltura");
+    resultado.innerText = altura;
+    return resultado.innerText;
+}
