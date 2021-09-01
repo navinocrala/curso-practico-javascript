@@ -129,3 +129,36 @@ function calcularAreaCirculo(){
     const area = areaCirculo(value);
     alert("El área del círculo es " + area );
 }
+
+function calcularAltura(a, b, c) {
+    if (a + b > c && a + c > b && b + c > a && a - b < c  && a - c < b && b - c < a) {
+        if (a == b || b == c || c == a) {
+            console.log ("Es un triángulo isóceles");
+            if (a == b) {
+                const baseIsoceles = c / 2;
+                const hipotenusa = a;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
+                return altura;
+            }
+            else if (a == c) {
+                const baseIsoceles = b / 2;
+                const hipotenusa = a;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
+                return altura;
+            }
+            else if (b == c) {
+                const baseIsoceles = a / 2;
+                const hipotenusa = c;
+                const altura = Math.sqrt((hipotenusa * hipotenusa) - (baseIsoceles * baseIsoceles));
+                return altura;
+            }
+        }
+        else {
+            return console.log  ("No son las medidas de un triángulo isóceles.")
+        }
+    }
+    else {
+        return "No son las medidas de un triángulo"    
+    }    
+}
+
