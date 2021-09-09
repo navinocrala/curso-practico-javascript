@@ -8,9 +8,29 @@
     <title>Porcentajes y descuentos | Curso de JavaScript Práctico</title>
 </head>
 <body>
+    <section>
     <h1>
         Porcentajes y Descuentos.
     </h1>
+    <h3>
+        Calcula el precio final de tus productos.
+    </h3>
+    <form action="">
+        <label for="inputPrecio">
+        Ingresa el precio normal.
+        </label>
+        <input id="inputPrecio" type="number"><br><br>
+        <label for="inputCupon">
+        Ingresa tu cupón de descuento.
+        </label>
+        <input id="inputCupon" type="text"><br>
+        <button type="button" onclick="presentarPrecio()">Calcular Precio</button>
+
+        <p id="resultado"></p>
+    </form> 
+    </section>
+
+
     
 </body>
 </html>
