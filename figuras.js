@@ -153,7 +153,7 @@ function alturaIsosceles(a, b, c) {
             }
         }
         else {
-            return "No son las medidas de un triángulo isósceles.";
+            return "No son las medidas de un triángulo isósceles, verifique las medidas por favor.";
         }
     }
     else {
