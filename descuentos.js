@@ -9,7 +9,7 @@ function calcularCupones(cupon){
      if (cupon == "JuanDC_es_Batman") {
          descuento = 15;
      }
-     else if (cupon == "pero_no_le_digas_a_nadie"){
+     else if (cupon == "descuento_primavera"){
          descuento = 30;
      }
      else if (cupon == "es_un_secreto"){
